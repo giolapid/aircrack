@@ -5,11 +5,16 @@ macchanger -r wlan0
 iwconfig mode monitor
 ifconfig wlan0 up
 
+change and kill with airmon
+airmon-ng check wlan0 
+
 airodump-ng wlan0 -- find target
 
 then 
 
 airodump-ng -c[Channel] -w[FILE] --bssid [ssid] wlan0
+
+iwconfig wlan0 channel [channel of target]
 
 to DOS
 
